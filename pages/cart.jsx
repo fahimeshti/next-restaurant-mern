@@ -36,7 +36,7 @@ const Cart = () => {
 
   const createOrder = async (data) => {
     try {
-      const res = await axios.post("http://esti-next-restaurant-mern.vercel.app/api/orders", data);
+      const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/orders`, data);
       if (res.status === 201) {
         dispatch(reset());
         router.push(`/orders/${res.data._id}?customer=${data.customer}&address=${data.address}&total=${data.total}&dis=${discount}`);
@@ -120,7 +120,7 @@ const Cart = () => {
           </tbody>
           <tbody>
             {cart.products.map((product) => (
-              <tr className={styles.tr} key={product._id}>
+              <tr className={styles.tr} key={product.price}>
                 <td>
                   <div className={styles.imgContainer}>
                     <Image

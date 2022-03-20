@@ -51,7 +51,7 @@ const Add = ({ setClose }) => {
         extraOptions,
         img: url,
       };
-      await axios.post("http://esti-next-restaurant-mern.vercel.app/api/products", newProduct);
+      await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/products`, newProduct);
       setShowSpinner(false)
       setClose(true);
     } catch (err) {

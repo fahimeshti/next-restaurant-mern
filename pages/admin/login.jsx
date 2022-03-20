@@ -11,7 +11,7 @@ const Login = () => {
 
   const handleClick = async () => {
     try {
-      await axios.post("http://esti-next-restaurant-mern.vercel.app/api/login", {
+      await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/login`, {
         username,
         password,
       });
@@ -56,7 +56,7 @@ export const getServerSideProps = async (ctx) => {
     };
   }
 
-  const productRes = await axios.get("http://esti-next-restaurant-mern.vercel.app/api/products");
+  const productRes = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/products`);
 
   return {
     props: {
