@@ -51,7 +51,7 @@ const Add = ({ setClose }) => {
         extraOptions,
         img: url,
       };
-      await axios.post("http://localhost:3000/api/products", newProduct);
+      await axios.post("http://esti-next-restaurant-mern-hnu4du98u-fahimeshti.vercel.app/api/products", newProduct);
       setShowSpinner(false)
       setClose(true);
     } catch (err) {
