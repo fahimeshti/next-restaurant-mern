@@ -43,8 +43,13 @@
   font-size: 62px;
   text-align: center;
   color: #d1411e;
+  cursor: pointer;
 }
-
+@media screen and (max-width: 768px) {
+  .item:first-child {
+    display: none;
+  }
+}
 @media screen and (max-width: 480px) {
   .container {
     height: auto;

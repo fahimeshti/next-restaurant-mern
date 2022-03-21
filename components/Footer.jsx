@@ -2,6 +2,9 @@ import Image from "next/image";
 import styles from "../styles/Footer.module.css";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0)
+  }
   return (
     <div className={styles.container}>
       <div className={styles.item}>
@@ -41,7 +44,7 @@ const Footer = () => {
             SATURDAY - SUNDAY
             <br /> 12:00 – 24:00
           </p>
-          <h2 className={styles.ahar}>Ahar</h2>
+          <h2 className={styles.ahar} onClick={scrollToTop}>Ahar</h2>
         </div>
       </div>
     </div>

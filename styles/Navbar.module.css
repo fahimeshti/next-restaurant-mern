@@ -44,7 +44,7 @@
 
 .ahar {
   font-family: 'Inspiration', cursive;
-  font-size: 42px;
+  font-size: 54px;
   cursor: pointer;
 }
 
@@ -115,6 +115,9 @@
 }
 
 @media screen and (max-width:480px) {
+  .container {
+    padding: 0px 30px;
+  }
   .item {
     justify-content: flex-start;
   }
@@ -124,5 +127,8 @@
 
   .item:nth-child(1) {
     flex: 3;
+  }
+  .ahar {
+    font-size: 48px;
   }
 }
