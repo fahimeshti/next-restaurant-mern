@@ -2,7 +2,7 @@
 
 ---
 
-Ahar is a website for a **Restaurant**. The main purpose of this website is to order foods online. It is very user friendly. It is built with **Next JS**. If you find any problem please create an issue.
+Ahar is a **Restaurant** website . The main purpose of this website is to order foods online. It is very user friendly. It is built with **Next JS**. If you find any problem please create an issue.
 
 ## Key Features
 
