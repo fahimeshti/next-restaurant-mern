@@ -6,6 +6,7 @@ const handler = async (req, res) => {
 
   await dbConnect();
 
+
   if (method === "GET") {
     try {
       const orders = await Order.find();
