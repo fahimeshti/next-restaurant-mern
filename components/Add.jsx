@@ -63,11 +63,6 @@ const Add = ({ setClose }) => {
 
   return (
     <div className={styles.container}>
-
-    { showError && <div className={styles.errorWarn}>
-     <p> Something went wrong! </p>
-    </div>}
-
       <div className={styles.wrapper}>
         { showSpinner && (<div className={styles.spinnerContainer}>
         <div className={styles["lds-dual-ring"]}></div>
@@ -152,6 +147,9 @@ const Add = ({ setClose }) => {
           Create
         </button>
       </div>
+      { showError && <div className={styles.errorWarn}>
+     <p> Something went wrong! </p>
+    </div>}
     </div>
   );
 };
