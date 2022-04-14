@@ -26,12 +26,12 @@ const Login = () => {
       <div className={styles.wrapper}>
         <h1>Admin Dashboard</h1>
         <input
-          placeholder="username"
+          placeholder="username(admin)"
           className={styles.input}
           onChange={(e) => setUsername(e.target.value)}
         />
         <input
-          placeholder="password"
+          placeholder="password(45678)"
           type="password"
           className={styles.input}
           onChange={(e) => setPassword(e.target.value)}
@@ -56,11 +56,9 @@ export const getServerSideProps = async (ctx) => {
     };
   }
 
-  const productRes = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/products`);
-
   return {
     props: {
-      products: productRes.data,
+      admin: true,
     },
   };
 };
